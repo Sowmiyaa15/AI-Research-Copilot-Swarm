@@ -1,0 +1,150 @@
+================================================================================
+AI RESEARCH COPILOT SWARM - QUICK START GUIDE
+================================================================================
+
+STEP 1: INSTALL DEPENDENCIES
+-----------------------------
+Open terminal/command prompt in this folder and run:
+
+    pip install -r requirements.txt
+
+Expected output: "Successfully installed Flask-3.0.0 flask-cors-4.0.0 requests-2.31.0"
+
+
+STEP 2: START BACKEND SERVER
+-----------------------------
+Windows:
+    Double-click RUN.bat
+    OR run: python backend/app.py
+
+Linux/Mac:
+    Run: chmod +x RUN.sh (first time only)
+    Run: ./RUN.sh
+    OR run: python3 backend/app.py
+
+Expected output: "Server running on http://localhost:5000"
+KEEP THIS WINDOW OPEN!
+
+
+STEP 3: OPEN FRONTEND
+----------------------
+Windows:
+    Double-click OPEN_FRONTEND.bat
+    OR open frontend/index.html in your browser
+
+Linux/Mac:
+    Run: chmod +x OPEN_FRONTEND.sh (first time only)
+    Run: ./OPEN_FRONTEND.sh
+    OR open frontend/index.html in your browser
+
+
+STEP 4: ENTER RESEARCH TOPIC
+-----------------------------
+In the web interface:
+1. Type your research query in the input box
+   Examples:
+   - "machine learning in healthcare"
+   - "deep learning computer vision"
+   - "natural language processing"
+
+2. Click "🔍 Analyze Research" button
+
+3. Wait 10-30 seconds while agents process
+
+
+STEP 5: VIEW ALL AGENT OUTPUTS
+-------------------------------
+Results will appear in 6 sections:
+
+📊 Executive Summary - Overview and statistics
+📚 Retrieved Papers - Top 5 papers from arXiv
+🔬 Knowledge Extraction - Methods and findings
+⚖️ Method Comparison - Strengths and weaknesses
+✅ Claim Validation - Consistency analysis
+🔍 Research Gaps - Identified opportunities
+💡 Research Ideas - Actionable proposals
+
+
+OFFLINE CAPABILITIES
+--------------------
+✅ Works Offline:
+   - Frontend interface
+   - Backend server
+   - Database storage
+   - All agent processing
+
+❌ Requires Internet:
+   - arXiv API (retrieving papers)
+
+
+TROUBLESHOOTING
+---------------
+Problem: "Module not found"
+Solution: pip install -r requirements.txt
+
+Problem: "Port 5000 already in use"
+Solution: Change port in backend/app.py (line 285)
+
+Problem: CORS errors
+Solution: pip install flask-cors, restart backend
+
+Problem: No papers retrieved
+Solution: Check internet connection, try different query
+
+
+TESTING
+-------
+1. Check backend health:
+   Open browser: http://localhost:5000/api/health
+   Should see: {"status": "ok", ...}
+
+2. Check database stats:
+   Open browser: http://localhost:5000/api/stats
+   Should see: {"success": true, ...}
+
+
+STOPPING THE APPLICATION
+-------------------------
+1. Press Ctrl+C in the backend terminal
+2. Close the browser tab
+
+
+NEED MORE HELP?
+---------------
+See SETUP.md for detailed instructions
+See README.md for full documentation
+
+
+SYSTEM REQUIREMENTS
+-------------------
+- Python 3.8 or higher
+- 2GB RAM minimum (4GB recommended)
+- Internet connection (for arXiv API)
+- Modern web browser
+
+
+PROJECT STRUCTURE
+-----------------
+ai_research_copilot/
+├── backend/          # Flask server and agents
+├── frontend/         # HTML/CSS/JS dashboard
+├── requirements.txt  # Python dependencies
+├── RUN.bat          # Windows launcher
+├── RUN.sh           # Linux/Mac launcher
+└── research.db      # SQLite database (created on first run)
+
+
+SUCCESS INDICATORS
+------------------
+✅ Backend shows "Server running on http://localhost:5000"
+✅ Frontend loads without errors
+✅ Can enter and submit research query
+✅ Progress indicators animate during processing
+✅ All 6 sections display results
+✅ Papers retrieved from arXiv
+✅ Research ideas generated
+
+
+ENJOY USING AI RESEARCH COPILOT SWARM! 🚀
+
+================================================================================
